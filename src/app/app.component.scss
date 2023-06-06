@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     padding : 50px;
+    margin : 50px;
 
 
     .title {
@@ -23,10 +24,6 @@
             justify-self: center;
         }
     }
-
-    .content {
-        margin : 50px;   
-    }
 }
 
 footer {
@@ -38,5 +35,18 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+    }
+}
+
+
+@media (max-width : 768px) {
+    .content {
+        padding : 0px;
+        margin : 20px 4px;
+        
+        .title {
+            padding : 20px;
+            margin : 0px;
+        }
     }
 }
