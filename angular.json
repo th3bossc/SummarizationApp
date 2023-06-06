@@ -30,9 +30,21 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input" : "src/light-mode.scss",
+                "bundleName": "light-mode",
+                "inject": false
+              },
+              {
+                "input" : "src/dark-mode.scss",
+                "bundleName": "dark-mode",
+                "inject": false
+              }
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

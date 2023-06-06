@@ -1,0 +1,42 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding : 50px;
+
+
+    .title {
+        padding : 50px;
+        margin : 50px;
+        border-radius: 8px;
+        .title-content {
+            text-align: center;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 48px;
+        }
+
+        .about {
+            border : red solid 2px;
+            background-color: white;
+            display: flex;
+            justify-self: center;
+        }
+    }
+
+    .content {
+        margin : 50px;   
+    }
+}
+
+footer {
+    // background-color : var(--primary-color);
+    color : var(--text-secondary-color);
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="flex justify-content-center flex-wrap gap-3">
+        <div class="flex align-items-center">
+            <p-radioButton name="FileType" value="direct_text" [(ngModel)]="fileType" inputId="1"></p-radioButton>
+            <label for="1" class="ml-2"> Type Text manually </label>
+        </div>
+
+        <div class="flex align-items-center">
+            <p-radioButton name="FileType" value="pdf" [(ngModel)]="fileType" inputId="2"></p-radioButton>
+            <label for="2" class="ml-2"> PDF (.pdf) </label>
+        </div>
+        
+        <div class="flex align-items-center">
+            <p-radioButton name="FileType" value="txt" [(ngModel)]="fileType" inputId="3"></p-radioButton>
+            <label for="3" class="ml-2"> Text (.txt) </label>
+        </div>
+    </div>
+    <div class="mt-5 mb-3 text-center" style="transition : all 500ms ease-in-out;">
+        <p-toast></p-toast>
+        <!-- <p-fileUpload mode="basic" chooseLabel="Choose" name="file" url="http://127.0.0.1:5000/file_api/" accept="application/*" [maxFileSize]="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload> -->
+        <p-fileUpload *ngIf="fileType === 'pdf'" #fileInputPdf mode="basic" chooseLabel="Choose PDF file" name="file" accept="application/pdf" [maxFileSize]="1000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputPdf)"></p-fileUpload>
+        <p-fileUpload *ngIf="fileType === 'txt'" #fileInputText mode="basic" chooseLabel="Choose Text file" name="file" accept="text/plain" [maxFileSize]="1000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputText)"></p-fileUpload>
+        <span *ngIf="fileType === 'direct_text'" class="p-float-label">
+            <form #texttform [formGroup]="textForm" (ngSubmit)="onSubmitTextAreaData()">
+                <textarea id="float-input" rows="10" cols="100" pInputTextarea formControlName="textField"></textarea>
+                <button pButton pRipple class="mt-2"> Submit </button>
+            </form>
+            <!-- <label for="float-input">Summary</label> -->
+        </span>
+    </div>
+
+    <div *ngIf="displayProgressBar">
+        <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
+    </div>
+    <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
+        <p class="m-0">
+            {{apiData.summary}}
+        </p>
+    </p-fieldset>
+</div>

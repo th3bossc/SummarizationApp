@@ -1,0 +1,24 @@
+<div class="container">
+    <form class = "form" #urlForm [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+
+        <div class="p-inputgroup mb-3">
+            <span class="p-inputgroup-addon">www</span>
+            <input type="text" pInputText formControlName="UrlField" placeholder="Enter Youtube Link" />
+        </div>
+        
+
+        
+        <div class="mb-3 text-center">
+            <button type="submit" pButton pRipple [disabled]="reactiveForm.invalid"> Submit </button>
+        </div>
+    </form>
+
+    <div *ngIf="displayProgressBar">
+        <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
+    </div>
+    <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
+        <p class="m-0">
+            {{apiData.summary}}
+        </p>
+    </p-fieldset>
+</div>
