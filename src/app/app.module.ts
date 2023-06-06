@@ -10,7 +10,6 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { MessagesModule } from 'primeng/messages';
 import { ToastModule } from 'primeng/toast';
 import { ProgressBarModule } from 'primeng/progressbar';
-import { PanelModule } from 'primeng/panel';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AnimateModule } from 'primeng/animate';
@@ -46,7 +45,6 @@ import { ThemeService } from './Services/theme.service';
     ToastModule,
     HttpClientModule,
     ProgressBarModule,
-    PanelModule,
     RadioButtonModule,
     InputTextareaModule,
     AnimateModule,
