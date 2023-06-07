@@ -1,0 +1,111 @@
+{
+  "configVersion": 1,
+  "timestamp": 1686124693923,
+  "index": "/SummarizationApp/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SummarizationApp/dark-mode.css",
+        "/SummarizationApp/favicon.ico",
+        "/SummarizationApp/index.html",
+        "/SummarizationApp/light-mode.css",
+        "/SummarizationApp/main.8cbb281fac9ee09b.js",
+        "/SummarizationApp/manifest.webmanifest",
+        "/SummarizationApp/polyfills.aebea42858ae38a0.js",
+        "/SummarizationApp/runtime.4f4d82eca1dfce7f.js",
+        "/SummarizationApp/scripts.cbc41f404d22c487.js",
+        "/SummarizationApp/styles.7815263092a11153.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/SummarizationApp/assets/icons/icon-128x128.png",
+        "/SummarizationApp/assets/icons/icon-144x144.png",
+        "/SummarizationApp/assets/icons/icon-152x152.png",
+        "/SummarizationApp/assets/icons/icon-192x192.png",
+        "/SummarizationApp/assets/icons/icon-384x384.png",
+        "/SummarizationApp/assets/icons/icon-512x512.png",
+        "/SummarizationApp/assets/icons/icon-72x72.png",
+        "/SummarizationApp/assets/icons/icon-96x96.png",
+        "/SummarizationApp/color.dae87a04d07ca92b.png",
+        "/SummarizationApp/hue.8b1818380241e6ac.png",
+        "/SummarizationApp/primeicons.0112589c5695a9ed.ttf",
+        "/SummarizationApp/primeicons.943ab24c43224d29.svg",
+        "/SummarizationApp/primeicons.ba3f916dfb64be8c.woff2",
+        "/SummarizationApp/primeicons.f8b9e8a4e401b603.woff",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-500.4ce802079c5e2843.woff",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-500.de270e01b582cd35.woff2",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-700.c5993c4d788e3ff6.woff",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-700.fea1ca242b09ae4c.woff2",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-regular.5c59b24786083ffe.woff2",
+        "/SummarizationApp/roboto-v20-latin-ext_latin-regular.c9064c1abfc45804.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/SummarizationApp/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/SummarizationApp/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/SummarizationApp/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/SummarizationApp/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/SummarizationApp/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/SummarizationApp/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/SummarizationApp/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/SummarizationApp/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/SummarizationApp/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
+    "/SummarizationApp/dark-mode.css": "39cd6e5eb00750d41399c0670bf9d43d57fe788c",
+    "/SummarizationApp/favicon.ico": "c6d74756ade92eb9894259393b71c26fda28b18d",
+    "/SummarizationApp/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
+    "/SummarizationApp/index.html": "ae15a4b2a4eab64986f4c7abe3546d7f3bfbcdf9",
+    "/SummarizationApp/light-mode.css": "2db8ec82d0ccb5c9893d3586797ba2e9a0a3c648",
+    "/SummarizationApp/main.8cbb281fac9ee09b.js": "74d5793b3251a1249291dab8b6417483a4f2ee7c",
+    "/SummarizationApp/manifest.webmanifest": "f59600932ead1eff1f82aafed8cbc4b608f2e97c",
+    "/SummarizationApp/polyfills.aebea42858ae38a0.js": "29596510d96fdc714b1488ddecce8be3c753883d",
+    "/SummarizationApp/primeicons.0112589c5695a9ed.ttf": "ceeb46d594fde5cc507cdf8b70e38e78fe47653c",
+    "/SummarizationApp/primeicons.943ab24c43224d29.svg": "d3332a45242b8f6edbf3f3c7176a280e7edcd961",
+    "/SummarizationApp/primeicons.ba3f916dfb64be8c.woff2": "55a4b2a5f02e362405d8d874903af0b5f6a6c15d",
+    "/SummarizationApp/primeicons.f8b9e8a4e401b603.woff": "b1648b50be13350fde8b5d9a6fe78354ddcc43e4",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-500.4ce802079c5e2843.woff": "ff5213b69a5c62c3a33bdfcd71b9be121e5858db",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-500.de270e01b582cd35.woff2": "6266cfccbd3281630cd4ba6d7dfd953999268480",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-700.c5993c4d788e3ff6.woff": "47950a5a898a662ff110c52d2b53d9d3f5e224cf",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-700.fea1ca242b09ae4c.woff2": "789d6227065d5d9767bc094e8fb384a26009c9de",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-regular.5c59b24786083ffe.woff2": "a39cd33a2457d12a3eb61e0841c91b73e4af90ac",
+    "/SummarizationApp/roboto-v20-latin-ext_latin-regular.c9064c1abfc45804.woff": "c574d647bbf9412b82b0cdcb0e702a3a93ffd022",
+    "/SummarizationApp/runtime.4f4d82eca1dfce7f.js": "6efb91ff5b2a90e605250235f117d3463bbc22b5",
+    "/SummarizationApp/scripts.cbc41f404d22c487.js": "56c8f90db11b19f6aed4be6420cda43358a2a097",
+    "/SummarizationApp/styles.7815263092a11153.css": "a70d0ce1c7f94eca89a5e516d6fabe82cfe00f47"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
