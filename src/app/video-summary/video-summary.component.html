@@ -16,6 +16,7 @@
     <div *ngIf="displayProgressBar">
         <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
     </div>
+    <p-messages [(value)]="errorMessage" [enableService]="false"></p-messages>
     <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
         <p class="m-0">
             {{apiData.summary}}

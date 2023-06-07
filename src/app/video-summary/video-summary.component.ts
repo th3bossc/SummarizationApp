@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 import { ApiCallService } from '../Services/api-call.service';
+import { Message } from 'primeng/api';
 @Component({
   selector: 'app-video-summary',
   templateUrl: './video-summary.component.html',
@@ -10,7 +11,7 @@ export class VideoSummaryComponent implements OnInit {
   reactiveForm : FormGroup;
   apiData : {'title' : string, 'summary'  : string} = null;
   displayProgressBar : boolean = false;
-
+  errorMessage : Message[] = null;
 
 
   constructor(private apiService : ApiCallService) {}
@@ -48,6 +49,13 @@ export class VideoSummaryComponent implements OnInit {
     this.apiService.getVideoData(this.reactiveForm.value['UrlField']).subscribe((data) => {
       this.apiService.apiResponse = data;
       this.apiData = data;
+      this.errorMessage = null;
+      this.displayProgressBar = false;
+    },
+    (error) => {
+      this.apiService.apiResponse = null;
+      console.log(error['error']['error']);
+      this.errorMessage = [{severity : 'error', summary : 'error', detail : error['error']['error']}];
       this.displayProgressBar = false;
     }); 
     this.reactiveForm.reset();
