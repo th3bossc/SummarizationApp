@@ -22,8 +22,11 @@
         <p-fileUpload *ngIf="fileType === 'txt'" #fileInputText mode="basic" chooseLabel="Choose Text file" name="file" accept="text/plain" [maxFileSize]="1000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputText)"></p-fileUpload>
         <span *ngIf="fileType === 'direct_text'" class="p-float-label">
             <form #texttform [formGroup]="textForm" (ngSubmit)="onSubmitTextAreaData()">
-                <textarea id="float-input" style="width : 100%;" rows="10" pInputTextarea formControlName="textField"></textarea>
-                <button pButton pRipple class="mt-2"> Submit </button>
+                <span class="p-float-label">
+                    <textarea id="float-input" style="width : 100%;" rows="10" pInputTextarea formControlName="textField"></textarea>
+                    <label for="float-input"> Enter a miniumum of 1500 words (10,000 characters) </label>
+                </span>
+                <button pButton pRipple class="mt-2" [disabled]="textForm.invalid"> Submit </button>
             </form>
             <!-- <label for="float-input">Summary</label> -->
         </span>

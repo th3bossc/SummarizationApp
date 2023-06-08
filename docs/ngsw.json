@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1686124693923,
+  "timestamp": 1686250513792,
   "index": "/SummarizationApp/index.html",
   "assetGroups": [
     {
@@ -15,7 +15,7 @@
         "/SummarizationApp/favicon.ico",
         "/SummarizationApp/index.html",
         "/SummarizationApp/light-mode.css",
-        "/SummarizationApp/main.8cbb281fac9ee09b.js",
+        "/SummarizationApp/main.a5f17464f274eb58.js",
         "/SummarizationApp/manifest.webmanifest",
         "/SummarizationApp/polyfills.aebea42858ae38a0.js",
         "/SummarizationApp/runtime.4f4d82eca1dfce7f.js",
@@ -70,9 +70,9 @@
     "/SummarizationApp/dark-mode.css": "39cd6e5eb00750d41399c0670bf9d43d57fe788c",
     "/SummarizationApp/favicon.ico": "c6d74756ade92eb9894259393b71c26fda28b18d",
     "/SummarizationApp/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "/SummarizationApp/index.html": "ae15a4b2a4eab64986f4c7abe3546d7f3bfbcdf9",
+    "/SummarizationApp/index.html": "1c09026ad5ab573711c6c9a62e5e7687ca9f6185",
     "/SummarizationApp/light-mode.css": "2db8ec82d0ccb5c9893d3586797ba2e9a0a3c648",
-    "/SummarizationApp/main.8cbb281fac9ee09b.js": "74d5793b3251a1249291dab8b6417483a4f2ee7c",
+    "/SummarizationApp/main.a5f17464f274eb58.js": "90c1da1bd53931e09b82346fdeca6d3723cd4400",
     "/SummarizationApp/manifest.webmanifest": "f59600932ead1eff1f82aafed8cbc4b608f2e97c",
     "/SummarizationApp/polyfills.aebea42858ae38a0.js": "29596510d96fdc714b1488ddecce8be3c753883d",
     "/SummarizationApp/primeicons.0112589c5695a9ed.ttf": "ceeb46d594fde5cc507cdf8b70e38e78fe47653c",

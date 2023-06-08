@@ -9,8 +9,14 @@ import { catchError, map, Observable, throwError } from 'rxjs';
 export class ApiCallService {
 
   constructor(private http : HttpClient) { }
-  apiUrl : string = "http://127.0.0.1:5000/";
+  // apiUrl : string = "http://127.0.0.1:5000/";
+  apiUrl : string = "https://Th3BossC-TranscriptApi.hf.space/";
   apiResponse : {'title' : string, 'summary' : string};
+
+
+  checkOnline() {
+    return this.http.get(this.apiUrl + 'online');
+  }
 
   private getId(url : string) : string | boolean{
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;

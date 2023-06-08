@@ -19,7 +19,7 @@ export class FileSummaryComponent {
 
   ngOnInit() {
     this.textForm = new FormGroup({
-      textField : new FormControl(null, [Validators.minLength(1000)])
+      textField : new FormControl(null, [Validators.minLength(10000)])
     });
     this.fileType = 'direct_text';
     
