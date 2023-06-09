@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { ApiCallService } from '../Services/api-call.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'app-file-summary',
@@ -15,7 +16,7 @@ export class FileSummaryComponent {
   
   apiData : {'title' : string, 'summary' : string} = null;
 
-  constructor(private messageService : MessageService, private apiService : ApiCallService) {}
+  constructor(private messageService : MessageService, private apiService : ApiCallService, private clipboard : Clipboard) {}
 
   ngOnInit() {
     this.textForm = new FormGroup({
@@ -51,7 +52,7 @@ export class FileSummaryComponent {
     fileInput.clear();
   }
 
-  validFileType() {
-
+  onCopy() {
+    this.clipboard.copy(this.apiData['summary']);
   }
 }

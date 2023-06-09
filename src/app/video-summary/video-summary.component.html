@@ -18,6 +18,7 @@
     </div>
     <p-messages [(value)]="errorMessage" [enableService]="false"></p-messages>
     <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
+        <p-button icon="pi pi-copy" styleClass="p-button-rounded p-button-info p-button-text p-button-raised" (onClick)="onCopy"></p-button>
         <p class="m-0">
             {{apiData.summary}}
         </p>

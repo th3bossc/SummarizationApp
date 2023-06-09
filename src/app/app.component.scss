@@ -9,11 +9,29 @@
         padding : 50px;
         margin : 50px;
         border-radius: 8px;
+
+
+
         .title-content {
             text-align: center;
             font-weight: 900;
             font-style: italic;
             font-size: 48px;
+            animation: animate 600ms;
+        }
+
+        .sub-title {
+            text-align : center;
+            font-weight: 300;
+            font-style: italic;
+
+            &::after {
+                content: "";
+                background-color: var(--text-color);
+                padding: 5px;
+                margin: 5px;
+                opacity: 0.8;
+            }
         }
 
         .about {
@@ -47,5 +65,18 @@ footer {
             padding : 20px;
             margin : 0px;
         }
+    }
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(-50%);
+        opacity : 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
     }
 }

@@ -36,6 +36,7 @@
         <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
     </div>
     <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
+        <p-button icon="pi pi-copy" styleClass="p-button-rounded p-button-info p-button-text p-button-raised" (onClick)="onCopy()"></p-button>
         <p class="m-0">
             {{apiData.summary}}
         </p>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 import { ApiCallService } from '../Services/api-call.service';
 import { Message } from 'primeng/api';
+import { Clipboard } from '@angular/cdk/clipboard'
 @Component({
   selector: 'app-video-summary',
   templateUrl: './video-summary.component.html',
@@ -14,7 +15,7 @@ export class VideoSummaryComponent implements OnInit {
   errorMessage : Message[] = null;
 
 
-  constructor(private apiService : ApiCallService) {}
+  constructor(private apiService : ApiCallService, private clipboard : Clipboard) {}
 
   ngOnInit() {
     this.reactiveForm = new FormGroup({
@@ -59,6 +60,10 @@ export class VideoSummaryComponent implements OnInit {
       this.displayProgressBar = false;
     }); 
     this.reactiveForm.reset();
+  }
+
+  onCopy() {
+    this.clipboard.copy(this.apiData['summary']);
   }
 
 }

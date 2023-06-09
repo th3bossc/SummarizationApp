@@ -14,5 +14,11 @@ export class ThemeService {
     console.log(themeLink);
     if (themeLink)
       themeLink.href = theme + '.css';
+      localStorage.setItem('theme', theme);
+  }
+
+  OnStartUp() {
+    let pastTheme = localStorage.getItem('theme');
+    pastTheme ? this.switchTheme(pastTheme) : this.switchTheme('dark-mode');
   }
 }

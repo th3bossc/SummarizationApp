@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
 @import url(../node_modules/primeicons/primeicons.css);
 @import url(../node_modules/primeng/resources/primeng.css);
 @import url(../node_modules/primeflex/primeflex.min.css);
 // @import url(../node_modules/primeng/resources/themes/md-dark-indigo/theme.css);
 // @import url(../node_modules/primeng/resources/themes/md-light-indigo/theme.css);
-@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
 
 body {
     font-family: var(--font-family);
@@ -16,6 +16,18 @@ body {
 
 a {
     text-decoration: none;
+}
+
+legend {
+    margin : auto !important;
+    padding : auto !important;
+}
+
+
+legend.scheduler-border{
+    width:inherit !important; /* Or auto */
+    padding:0 10px !important; /* To give a bit of padding on the left and right */
+    border-bottom:none !important;
 }
 
 

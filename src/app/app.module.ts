@@ -14,7 +14,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AnimateModule } from 'primeng/animate';
 import { ToolbarModule } from 'primeng/toolbar';
-import { FieldsetModule } from 'primeng/fieldset'
+import { FieldsetModule } from 'primeng/fieldset';
+import { ImageModule } from 'primeng/image';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AnimateModule,
     ToolbarModule,
     FieldsetModule,
+    ImageModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -66,3 +68,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//code to build
+// ng build --output-path docs --base-href /SummarizationApp/
