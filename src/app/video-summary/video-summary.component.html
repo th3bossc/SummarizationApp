@@ -9,7 +9,7 @@
 
         
         <div class="mb-3 text-center">
-            <button type="submit" pButton pRipple [disabled]="reactiveForm.invalid"> Submit </button>
+            <button type="submit" pButton pRipple [disabled]="reactiveForm.invalid && modelAwake" [pTooltip]="!modelAwake ? 'AI appears to be offline' : 'Please enter valid Youtube URL'" tooltipPosition="bottom"> Submit </button>
         </div>
     </form>
 

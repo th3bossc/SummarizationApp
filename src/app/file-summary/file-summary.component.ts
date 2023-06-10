@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { ApiCallService } from '../Services/api-call.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
@@ -13,6 +13,7 @@ export class FileSummaryComponent {
   textForm : FormGroup;
   fileType : string;
   displayProgressBar : boolean = false;
+  @Input('modelAwake') modelAwake : boolean;
   
   apiData : {'title' : string, 'summary' : string} = null;
 

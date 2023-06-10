@@ -15,7 +15,11 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AnimateModule } from 'primeng/animate';
 import { ToolbarModule } from 'primeng/toolbar';
 import { FieldsetModule } from 'primeng/fieldset';
-import { ImageModule } from 'primeng/image';
+import { TooltipModule } from 'primeng/tooltip';
+// import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card'
+import { Chip, ChipModule } from 'primeng/chip';
+import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,12 +30,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiCallService } from './Services/api-call.service';
 import { ThemeService } from './Services/theme.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { InformationComponent } from './information/information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoSummaryComponent,
-    FileSummaryComponent
+    FileSummaryComponent,
+    InformationComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,11 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AnimateModule,
     ToolbarModule,
     FieldsetModule,
-    ImageModule,
+    TooltipModule,
+    // PanelModule,
+    CardModule,
+    ChipModule,
+    DynamicDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -63,9 +73,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   providers: [
     MessageService, 
     ApiCallService, 
-    ThemeService
+    ThemeService,
+    DialogService,  
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
 

@@ -4,7 +4,6 @@
             <span style="color : var(--primary-color)">R</span>apid <span style="color : var(--primary-color)">R</span>ecap
         </h3>
         <h6 class="sub-title">
-            <!-- Uncover the Essentials, Effortlessly -->
             {{catchPhrase}}
         </h6>
         <p-toolbar>
@@ -15,20 +14,21 @@
             </div>
             <div class="p-toolbar-group-end"></div>
         </p-toolbar>
+        <div class="show-dialog">
+            <button (click)="showInfo()" pButton pRipple class="p-button-rounded p-button-help"> Wanna know more about the app? </button>
+        </div>
         <p-messages [(value)]="online" [enableService]="false" [closable]="true"></p-messages>
     </div>
     
     <hr class="m-1">
-    <!-- <div class="content"> -->
         <p-tabView [style]="{'margin' : '50px'}">
             <p-tabPanel header="Summarize Video">
-                <app-video-summary></app-video-summary>
+                <app-video-summary [modelAwake]="modelAwake"></app-video-summary>
             </p-tabPanel>
             <p-tabPanel header="Summarize File">
-                <app-file-summary></app-file-summary>
+                <app-file-summary [modelAwake]="modelAwake"></app-file-summary>
             </p-tabPanel>
         </p-tabView>
-    <!-- </div> -->
 </div>
 
 <hr>    

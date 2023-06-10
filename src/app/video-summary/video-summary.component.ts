@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 import { ApiCallService } from '../Services/api-call.service';
 import { Message } from 'primeng/api';
@@ -13,7 +13,7 @@ export class VideoSummaryComponent implements OnInit {
   apiData : {'title' : string, 'summary'  : string} = null;
   displayProgressBar : boolean = false;
   errorMessage : Message[] = null;
-
+  @Input('modelAwake') modelAwake : boolean;
 
   constructor(private apiService : ApiCallService, private clipboard : Clipboard) {}
 
@@ -23,13 +23,6 @@ export class VideoSummaryComponent implements OnInit {
     });
 
     this.apiData = null;
-  }
-
-  noSpaceAllowed(control : FormControl) {
-    console.log(control.value);
-    if (control.value != null && control.value.indexOf(' ') != -1)
-      return {noSpaceAllowed : true};
-    return null;
   }
 
   verifyYOutubeUrl(UrlField : FormControl){
@@ -45,7 +38,6 @@ export class VideoSummaryComponent implements OnInit {
 
 
   onSubmit() : void {
-    console.log(this.reactiveForm.value['UrlField']);
     this.displayProgressBar = true;
     this.apiService.getVideoData(this.reactiveForm.value['UrlField']).subscribe((data) => {
       this.apiService.apiResponse = data;
@@ -55,7 +47,6 @@ export class VideoSummaryComponent implements OnInit {
     },
     (error) => {
       this.apiService.apiResponse = null;
-      console.log(error['error']['error']);
       this.errorMessage = [{severity : 'error', summary : 'error', detail : error['error']['error']}];
       this.displayProgressBar = false;
     }); 
