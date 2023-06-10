@@ -12,7 +12,7 @@ import { InformationComponent } from './information/information.component';
   encapsulation : ViewEncapsulation.None 
 })
 export class AppComponent implements OnInit {
-  title = 'SummarizationApp';
+  title = 'RapidRecap';
   online : Message[] = null;
   catchPhrase : string = "";
   modelChecked : boolean = false;
@@ -73,6 +73,6 @@ export class AppComponent implements OnInit {
   }
 
   showInfo() {
-    this.ref = this.infoDialog.open(InformationComponent, {header : "About the app..."})
+    this.ref = this.infoDialog.open(InformationComponent, {header : "About the app...", width : "90%"})
   }
 }
