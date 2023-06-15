@@ -2,7 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms'
 import { ApiCallService } from '../Services/api-call.service';
 import { Message } from 'primeng/api';
-import { Clipboard } from '@angular/cdk/clipboard'
+import { Clipboard } from '@angular/cdk/clipboard';
+import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { QnaComponent } from '../qna/qna.component';
 @Component({
   selector: 'app-video-summary',
   templateUrl: './video-summary.component.html',
@@ -10,12 +12,12 @@ import { Clipboard } from '@angular/cdk/clipboard'
 })
 export class VideoSummaryComponent implements OnInit {
   reactiveForm : FormGroup;
-  apiData : {'title' : string, 'summary'  : string} = null;
+  apiData : {'video_id' : string, 'title' : string, 'summary'  : string} = null;
   displayProgressBar : boolean = false;
   errorMessage : Message[] = null;
   @Input('modelAwake') modelAwake : boolean;
 
-  constructor(private apiService : ApiCallService, private clipboard : Clipboard) {}
+  constructor(private apiService : ApiCallService, private clipboard : Clipboard, public infoDialog : DialogService) {}
 
   ngOnInit() {
     this.reactiveForm = new FormGroup({
@@ -56,5 +58,6 @@ export class VideoSummaryComponent implements OnInit {
   onCopy() {
     this.clipboard.copy(this.apiData['summary']);
   }
+
 
 }

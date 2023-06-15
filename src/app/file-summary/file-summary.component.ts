@@ -15,13 +15,13 @@ export class FileSummaryComponent {
   displayProgressBar : boolean = false;
   @Input('modelAwake') modelAwake : boolean;
   
-  apiData : {'title' : string, 'summary' : string} = null;
+  apiData : {'file_id' : number, 'title' : string, 'summary' : string} = null;
 
   constructor(private messageService : MessageService, private apiService : ApiCallService, private clipboard : Clipboard) {}
 
   ngOnInit() {
     this.textForm = new FormGroup({
-      textField : new FormControl(null, [Validators.minLength(10000)])
+      textField : new FormControl(null, [Validators.minLength(1000)])
     });
     this.fileType = 'direct_text';
     
@@ -46,9 +46,11 @@ export class FileSummaryComponent {
   }
 
   customUpload(event : {files : Blob[]}, fileInput) {
+    this.displayProgressBar = true;
     this.apiService.postFileData(event.files[0], this.fileType).subscribe((data) => {
-      console.log(data);
       this.messageService.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded' });
+      this.apiData = data;
+      this.displayProgressBar = false;
     });
     fileInput.clear();
   }

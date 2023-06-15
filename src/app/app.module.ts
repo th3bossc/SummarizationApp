@@ -16,10 +16,11 @@ import { AnimateModule } from 'primeng/animate';
 import { ToolbarModule } from 'primeng/toolbar';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TooltipModule } from 'primeng/tooltip';
-// import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card'
-import { Chip, ChipModule } from 'primeng/chip';
+import { ChipModule } from 'primeng/chip';
 import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { AutoFocusModule } from 'primeng/autofocus';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,13 +32,15 @@ import { ApiCallService } from './Services/api-call.service';
 import { ThemeService } from './Services/theme.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { InformationComponent } from './information/information.component';
+import { QnaComponent } from './qna/qna.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VideoSummaryComponent,
     FileSummaryComponent,
-    InformationComponent
+    InformationComponent,
+    QnaComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,8 @@ import { InformationComponent } from './information/information.component';
     CardModule,
     ChipModule,
     DynamicDialogModule,
+    OverlayPanelModule,
+    AutoFocusModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

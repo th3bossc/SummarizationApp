@@ -1,0 +1,20 @@
+<div class="container">
+    <div #bottom class="messages">
+        <div *ngFor="let message of questions" [class]="message.sent ? 'me' : 'you'">
+            {{message.content}}
+        </div>
+        <div class="typing" [hidden]="!typing">
+            <span class="dot" style="--delay : 1"> <i class="pi pi-circle-fill"></i> </span>
+            <span class="dot" style="--delay : 2"> <i class="pi pi-circle-fill"></i> </span>
+            <span class="dot" style="--delay : 3"> <i class="pi pi-circle-fill"></i> </span>
+        </div>
+    </div>
+    <div class="input">
+        <form [formGroup]="questionForm" (submit)="onSubmit()">
+            <div class="p-inputgroup">
+                <input type="text" pInputText placeholder="Enter Question..." [autofocus]="true" formControlName="question"/>
+                <button type="submit" pButton icon="pi pi-send" styleClass="p-button-warn ng-invalid"></button>
+            </div>
+        </form>
+    </div>
+</div>

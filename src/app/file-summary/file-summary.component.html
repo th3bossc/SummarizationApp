@@ -18,13 +18,13 @@
     <div class="mt-5 mb-3 text-center container" style="transition : all 500ms ease-in-out;">
         <p-toast></p-toast>
         <!-- <p-fileUpload mode="basic" chooseLabel="Choose" name="file" url="http://127.0.0.1:5000/file_api/" accept="application/*" [maxFileSize]="1000000" (onUpload)="onBasicUpload($event)"></p-fileUpload> -->
-        <p-fileUpload *ngIf="fileType === 'pdf'" #fileInputPdf mode="basic" chooseLabel="Choose PDF file" name="file" accept="application/pdf" [maxFileSize]="1000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputPdf)" [pTooltip]="!modelAwake ? 'AI appears to be offline' : ''" tooltipPosition="bottom" [disabled]="!modelAwake"></p-fileUpload>
-        <p-fileUpload *ngIf="fileType === 'txt'" #fileInputText mode="basic" chooseLabel="Choose Text file" name="file" accept="text/plain" [maxFileSize]="1000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputText)" [pTooltip]="!modelAwake ? 'AI appears to be offline' : ''" tooltipPosition="bottom" [disabled]="!modelAwake"></p-fileUpload>
+        <p-fileUpload *ngIf="fileType === 'pdf'" #fileInputPdf mode="basic" chooseLabel="Choose PDF file" name="file" accept="application/pdf" [maxFileSize]="20000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputPdf)" [pTooltip]="!modelAwake ? 'AI appears to be offline' : ''" tooltipPosition="bottom" [disabled]="!modelAwake"></p-fileUpload>
+        <p-fileUpload *ngIf="fileType === 'txt'" #fileInputText mode="basic" chooseLabel="Choose Text file" name="file" accept="text/plain" [maxFileSize]="20000000" [customUpload]="true" (uploadHandler)="customUpload($event, fileInputText)" [pTooltip]="!modelAwake ? 'AI appears to be offline' : ''" tooltipPosition="bottom" [disabled]="!modelAwake"></p-fileUpload>
         <span *ngIf="fileType === 'direct_text'" class="p-float-label">
             <form #texttform [formGroup]="textForm" (ngSubmit)="onSubmitTextAreaData()">
                 <span class="p-float-label">
                     <textarea id="float-input" style="width : 100%;" rows="10" pInputTextarea formControlName="textField"></textarea>
-                    <label for="float-input"> Enter a miniumum of 1500 words (10,000 characters) </label>
+                    <label for="float-input"> Enter a miniumum of 200 words (1,000 characters) </label>
                 </span>
                 <button pButton pRipple class="mt-2" [disabled]="textForm.invalid && !modelAwake" [pTooltip]="!modelAwake ? 'AI appears to be offline' : 'The text is too short'" tooltipPosition="bottom"> Submit </button>
             </form>
@@ -40,5 +40,12 @@
         <p class="m-0">
             {{apiData.summary}}
         </p>
+        <p-overlayPanel #op>
+            <app-qna [type]="{'type' : 'file', 'file_id' : apiData.file_id}"></app-qna>
+        </p-overlayPanel>
+        <hr>
+        <div class="text-end mt-2">
+            <p-button (click)="op.toggle($event)" label = "Questions?" styleClass="p-button-rounded p-button-info"></p-button>
+        </div>
     </p-fieldset>
 </div>

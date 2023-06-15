@@ -4,7 +4,15 @@
             A text summarizer is an online tool that uses AI and complex algorithms to condense a text from its long, detailed version to one that is short and comprehensible. A summarizer tool carries all of the key points in a text over to the condensed version. The content you receive contains a complete overview of the text. For example, pasting 2000 words worth of content into the summarizer can result in a more digestible 200-word version, eliminating nearly ¾ of the text.
         </p>
     </p-card>
+    <p-card header="What is a Question Answering Model?" class="cards">
+        <p>
+            A Question Answering model is an AI model that uses natural language processing to find an answer given a question and context.
+        </p>
+    </p-card>
     <p-card header="What can I summarize?" class="cards">
+        <p>
+            I can summarize and answer basic questions from any of the following:-
+        </p>
         <p class="chips">
             <p-chip label="Youtube Videos" [style]="{'background-color': 'var(--primary-700)', 'color' : 'white'}"></p-chip>
             <p-chip label="Essays" [style]="{'background-color': 'var(--primary-700)', 'color' : 'white'}"></p-chip>
@@ -18,13 +26,14 @@
     </p-card>
     <p-card header="How does it work?" class="cards">
         <p>
-            Our website utilizes AI algorithms to convert speech into text, along with summarizing the text. the AI "understands" the context of the text/video using <span style="color: var(--cyan-600);"> state-of-the-art </span> AI models trained on a variety of custom datasets ranging from news articles and essays to scientific papers to even conversations. This enables the AI to better understand the meaning behind a text and break it down into a condensed version
+            My website utilizes AI algorithms to convert speech into text, along with summarizing the text. the AI "understands" the context of the file/text/video using <span style="color: var(--cyan-600);"> state-of-the-art </span> AI models trained on a variety of custom datasets ranging from news articles and essays to scientific papers to even conversations. This enables the AI to better understand the meaning behind a text and break it down into a condensed version.<br>
+            The transcript that is created videos / or the text are then kept cached as context, so that the Question Answering Model can answer any question on the inputted content.
         </p>
     </p-card>
     <p-card header="Behind The Scenes" class="cards">
         <p>
             The FrontEnd user-interface of the website has been made with Angular FrameWork to give the user interface a clean and modern look along with response and smooth animations<br>
-            the BackEnd has been implemented with Flask which controls the API calls and runs the User-Input via the AI models and returns back the output which is displayed to the User<br>
+            the BackEnd has been implemented with Flask which controls the API calls and runs the User-Input via the AI models and returns back the output which is displayed to the User. The data created from each API call is stored in database for future reference, so as to reduce unnecessory computation and to keep data ready for question answering ASAP <br>
             The sumarization model has been created and trained with the help of HuggingFace libary and PyTorch, while the Audio-To-Text model is implemented with OpenAi Whisper
 
             All the resources of the models and inferences have been linked below
@@ -35,6 +44,7 @@
                 <a pButton pRipple href = "https://www.github.com/th3bossc/SummarizationApp" target ="_blank" class="p-button-text p-button-raised p-button-help"> FrontEnd Source Code </a>
                 <a pButton pRipple href = "https://www.github.com/th3bossc/TranscriptApi" target ="_blank" class="p-button-text p-button-raised p-button-danger"> Backend Source Code </a>
                 <a pButton pRipple href = "https://huggingface.co/Th3BossC/SummarizationModel_t5-small_opeai_tldr" target ="_blank" class="p-button-text p-button-raised p-button-info"> Summarization Model </a>
+                <a pButton pRipple href = "http://huggingface.co/Th3BossC/QuestionAnsweringModel" target = "_blank" class = "p-button-text p-button-raised p-button-secondary"> Question Answering Model </a>
                 <a pButton pRipple href = "https://openai.com/research/whisper" target ="_blank" class="p-button-text p-button-raised p-button-success"> Audio To Text Model </a>
             </div>
             <div class="p-toolbar-group-end"></div>

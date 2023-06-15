@@ -2,7 +2,7 @@
     <form class = "form" #urlForm [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
 
         <div class="p-inputgroup mb-3">
-            <span class="p-inputgroup-addon">www</span>
+            <span class="p-inputgroup-addon"><i class="pi pi-youtube" style="font-size : 1.5rem;"></i></span>
             <input type="text" pInputText formControlName="UrlField" placeholder="Enter Youtube Link" />
         </div>
         
@@ -14,13 +14,22 @@
     </form>
 
     <div *ngIf="displayProgressBar">
+        <p class="text-center"> Tip: Hey, while you're waiting for me watch the video, get your questions ready, I can answer anything you throw at me </p>
         <p-progressBar mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
     </div>
     <p-messages [(value)]="errorMessage" [enableService]="false"></p-messages>
     <p-fieldset *ngIf="apiData && !displayProgressBar" [legend]="apiData.title">
-        <p-button icon="pi pi-copy" styleClass="p-button-rounded p-button-info p-button-text p-button-raised" (onClick)="onCopy"></p-button>
+        <p-button icon="pi pi-copy" styleClass="p-button-rounded p-button-info p-button-text p-button-raised" (onClick)="onCopy()"></p-button>
         <p class="m-0">
             {{apiData.summary}}
         </p>
+        <p-overlayPanel #op>
+            <app-qna [type]="{'type' : 'video', 'video_id' : apiData.video_id}"></app-qna>
+        </p-overlayPanel>
+        <hr>
+        <div class="text-end mt-2">
+            <p-button (click)="op.toggle($event)" label = "Questions?" styleClass="p-button-rounded p-button-info"></p-button>
+        </div>
     </p-fieldset>
+    
 </div>

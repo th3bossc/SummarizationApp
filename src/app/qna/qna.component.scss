@@ -1,0 +1,79 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    // border : 5px solid white;
+    // background-color: var(--text-color);
+    background-color: var(--surface-200);
+    border-radius : 8px;
+    color : white;
+    height : 500px;
+    width : 400px;
+    padding : 20px;
+    .messages {
+        display: flex;
+        flex-direction: column;
+        height: 95%;
+        overflow: auto;
+        .me {
+            background-color: var(--primary-700);
+            border-radius: 30px;
+            padding : 13px;
+            margin : 5px;
+            align-self: flex-end;
+            max-width: 60%;
+        }
+        
+        .you {
+            background-color: var(--bluegray-500);
+            border-radius: 30px;
+            padding : 13px;
+            margin : 5px;
+            align-self: flex-start;
+            max-width: 60%;
+        }
+
+        .typing {
+            display: flex;
+            gap : 3px;
+            padding : 13px;
+            margin : 5px;
+            .dot {    
+                color : var(--text-color);
+                animation: jump 750ms infinite;
+                animation-delay : calc(100ms * var(--delay));
+                i {
+                    font-size : 0.6rem;
+                }
+            }
+        }
+    }
+
+
+    .input {
+        margin-top : 5px;
+        justify-self: flex-end;
+    }
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20%);
+    }
+
+}
+
+
+@media (max-width : 768px) {
+    .container {
+        width : 300px;
+        height : 525px;
+        .messages {
+            .me, .you {
+                max-width: 90%;
+            }
+        }
+    }
+}

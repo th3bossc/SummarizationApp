@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     private themeChanger : ThemeService, 
     private apiService : ApiCallService, 
     private messageService : MessageService,
-    public infoDialog : DialogService
+    public infoDialog : DialogService,
   ) {}
 
   typeWriterAnimation() {
@@ -49,7 +49,6 @@ export class AppComponent implements OnInit {
       this.modelAwake = true;
     },
     (error) => {
-      console.log(error);
       if (this.modelChecked == false) {
         this.online = [{ severity: 'warn', summary: 'Oops!', detail: "The AI model took a nap due to inactivity, it's recharging it's batteries and will be online shortly!"}];
         this.modelChecked = true;
@@ -66,6 +65,7 @@ export class AppComponent implements OnInit {
     this.modelChecked = false;
     this.modelRunning();
     this.typeWriterAnimation();
+
   }
 
   toggleTheme(theme : string) {
@@ -74,5 +74,5 @@ export class AppComponent implements OnInit {
 
   showInfo() {
     this.ref = this.infoDialog.open(InformationComponent, {header : "About the app...", width : "90%"})
-  }
+  } 
 }
