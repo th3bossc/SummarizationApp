@@ -1,27 +1,51 @@
-# SummarizationApp
+# Rapid Recap - Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+This project is the frontend UI for a video/text summarization engine powered by a t5-small model. To view the backend code, [click here](https://github.com/th3bossc/TranscriptApi/)
+To view the hosted site visit [RapidRecap](https://th3bossc.github.io/SummarizationApp/)
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Overview
 
-## Build
+### The challenge
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Users should be able to:
+  - type in youtube urls, copy paste text, upload a .txt or .pdf files
+  - The summarized data is sent back to the user once the data has been processed
+  - The user can copy paste the output text
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## My process
 
-## Running end-to-end tests
+### Built with
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- [AngularJS](https://angular.io/) - JS library
+- [Sass](https://sass-lang.com) - CSS Preprocessor
+- [PrimeNg Components](https://primeng.org/) - For styles
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### What I learned
+
+Through this project, i was able to learn how to work with angular's http client to fetch data from backend, how REST convention works and connection of frontend to backend, and a various other things
+
+
+### Useful resources
+
+- [Angular Documentation](https://angular.io/docs) - Angular documentation helped me a lot when working with projects, and needed to know how a specific feature was used, and the best way to use it.
+- [Flask restful](https://flask-restful.readthedocs.io/en/latest/) - Flask restful helped me create a simple rest framework to send and receive data from the server
+
+## Author
+
+- Website - [Diljith P D](https://th3bossc.github.io/Portfolio)
